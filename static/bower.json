@@ -1,0 +1,27 @@
+{
+  "name": "swarm-mode-ui",
+  "homepage": "https://github.com/mlabouardy/swarm-mode-ui",
+  "authors": [
+    "mlabouardy <mohamed@labouardy.com>"
+  ],
+  "description": "Swarm Web UI",
+  "main": "",
+  "keywords": [
+    "Swarm",
+    "Docker",
+    "Cluster"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.6.1",
+    "bootstrap": "v4.0.0-alpha.6"
+  }
+}

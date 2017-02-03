@@ -1,10 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
   <head>
     <meta charset="utf-8">
     <title>Swarm Mode UI</title>
+    <link rel="stylesheet" href="/static/lib/bootstrap/dist/css/bootstrap.min.css" title="bootstrap4">
+    <link rel="stylesheet" href="static/css/default.css" title="ui-theme">
   </head>
-  <body>
-    Swarm Mode UI
+  <body class="container-fluid container-custom">
+    <div ng-view></div>
   </body>
+  <script src="/static/lib/jquery/dist/jquery.min.js"></script>
+  <script src="/static/lib/tether/dist/js/tether.min.js"></script>
+  <script src="/static/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="static/lib/angular/angular.min.js"></script>
+  <script src="static/lib/angular-route/angular-route.min.js"></script>
+  <script src="/static/js/app.js"></script>
+  <script src="static/js/controllers/controllers.module.js"></script>
+  <script src="/static/js/controllers/home.js"></script>
+  <script src="/static/js/controllers/services.js"></script>
+  <script src="/static/js/services/services.module.js"></script>
 </html>
