@@ -8,9 +8,13 @@ api = docker.Docker()
 def index():
     return send_file('templates/index.html')
 
-@app.route('/nodes')
-def nodes():
-    return jsonify(api.getNodes())
+@app.route('/workers')
+def workers():
+    return jsonify(api.getWorkers())
+
+@app.route('/managers')
+def managers():
+    return jsonify(api.getManagers())
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000, debug=True)

@@ -1,19 +1,32 @@
+<h3>Managers:</h3>
 <div class="row">
-    <div class="col-lg-3">
+    <div class="col-lg-2" ng-repeat="manager in managers">
         <div class="card">
+          <img class="card-img-top node-logo" src="/static/img/docker.png" alt="Node logo">
           <div class="card-block">
-            <h4 class="card-title">Manager</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h4 class="card-title">{{ manager.Description.Hostname }}</h4>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Vestibulum at eros</li>
+            <li class="list-group-item"><i class="fa fa-cog icon-space" aria-hidden="true"></i> Engine: {{ worker.Description }}</li>
+            <li class="list-group-item"><i class="fa fa-linux icon-space" aria-hidden="true"></i> OS: {{ worker.Description.Platform.OS }}/{{ worker.Description.Platform.Architecture }}</li>
+            <li class="list-group-item"><i class="fa fa-check icon-space" aria-hidden="true"></i> Availability: {{ worker.Spec.Availability }}</li>
           </ul>
+        </div>
+    </div>
+</div>
+<h3>Workers:</h3>
+<div class="row">
+    <div class="col-lg-2" ng-repeat="worker in workers">
+        <div class="card">
+          <img class="card-img-top node-logo" src="/static/img/docker.png" alt="Node logo">
           <div class="card-block">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+            <h4 class="card-title">{{ worker.Description.Hostname }}</h4>
           </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><i class="fa fa-cog icon-space" aria-hidden="true"></i> Engine: {{ worker.Description.Hostname }}</li>
+            <li class="list-group-item"><i class="fa fa-linux icon-space" aria-hidden="true"></i> OS: {{ worker.Description.Platform.OS }}/{{ worker.Description.Platform.Architecture }}</li>
+            <li class="list-group-item"><i class="fa fa-check icon-space" aria-hidden="true"></i> Availability: {{ worker.Spec.Availability }}</li>
+          </ul>
         </div>
     </div>
 </div>
