@@ -9,5 +9,9 @@ angular.module('app', ['ngRoute', 'app.controllers'])
                 templateUrl: '/static/partials/services.html',
                 controller: 'ServicesCtrl'
             })
+            .when('/tasks',{
+                templateUrl: '/static/partials/tasks.html',
+                controller: 'TasksCtrl'
+            })
             .otherwise({redirectTo: '/'});
     })

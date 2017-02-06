@@ -20,5 +20,9 @@ def managers():
 def services():
     return jsonify(api.getServices())
 
+@app.route('/tasks')
+def tasks():
+    return jsonify(api.getTasks())
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000, debug=True)

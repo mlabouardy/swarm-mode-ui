@@ -13,6 +13,10 @@ class Docker:
         r = requests.get(self.URL + '/services')
         return r.json();
 
+    def getTasks(self):
+        r = requests.get(self.URL + '/tasks')
+        return r.json();
+
     def getManagers(self):
         r = requests.get(self.URL + '/nodes')
         data = []

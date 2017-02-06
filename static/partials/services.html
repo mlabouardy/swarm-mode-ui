@@ -5,6 +5,9 @@
           <div class="card-block">
             <h4 class="card-title">{{ service.Spec.Name }}</h4>
           </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><i class="fa fa-cog icon-space" aria-hidden="true"></i> Replicas: {{ service.Spec.Mode.Replicated.Replicas }}</li>
+          </ul>
         </div>
     </div>
 </div>
