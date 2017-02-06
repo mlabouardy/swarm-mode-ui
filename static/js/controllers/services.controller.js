@@ -1,5 +1,9 @@
-var ServicesCtrl = function(){
-    console.log('Services Ctrl');
+var ServicesCtrl = function($scope, SwarmService){
+    $scope.services = [];
+
+    SwarmService.getServices().then(function(results){
+        $scope.services = results.plain();
+    });
 };
 
 angular.module('app.controllers')

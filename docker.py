@@ -9,6 +9,10 @@ class Docker:
     def __init__(self):
         self.URL = 'http://' + os.environ['SWARM_API']
 
+    def getServices(self):
+        r = requests.get(self.URL + '/services')
+        return r.json();
+
     def getManagers(self):
         r = requests.get(self.URL + '/nodes')
         data = []

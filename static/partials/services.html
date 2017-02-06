@@ -1,3 +1,10 @@
-<div>
-    Services
+<div class="row">
+    <div class="col-lg-2" ng-repeat="service in services">
+        <div class="card">
+          <img class="card-img-top node-logo" src="/static/img/service.png" alt="Node logo">
+          <div class="card-block">
+            <h4 class="card-title">{{ service.Spec.Name }}</h4>
+          </div>
+        </div>
+    </div>
 </div>

@@ -16,5 +16,9 @@ def workers():
 def managers():
     return jsonify(api.getManagers())
 
+@app.route('/services')
+def services():
+    return jsonify(api.getServices())
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000, debug=True)
