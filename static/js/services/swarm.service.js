@@ -15,6 +15,10 @@ var SwarmService = function(Restangular){
     this.getTasks = function() {
         return Restangular.oneUrl('tasks').get();
     };
+
+    this.getNodeName = function(name){
+        return Restangular.oneUrl('nodes/'+name).get();
+    };
 };
 
 angular.module('app.services')

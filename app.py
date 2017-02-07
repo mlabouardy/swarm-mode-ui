@@ -24,5 +24,9 @@ def services():
 def tasks():
     return jsonify(api.getTasks())
 
+@app.route('/nodes/<name>')
+def nodeName(name):
+    return jsonify(api.getNodeName(name))
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000, debug=True)

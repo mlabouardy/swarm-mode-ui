@@ -1,29 +1,37 @@
-<h3>Managers:</h3>
 <div class="row">
-    <div class="col-lg-2" ng-repeat="manager in managers">
+    <div class="col-lg-12">
+        <p style="color:#607D8B">Swarm Managers</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-2" ng-repeat="manager in managers" style="font-size:0.8em">
         <div class="card">
-          <img class="card-img-top node-logo" src="/static/img/docker.png" alt="Node logo">
+          <img src="/static/img/node.png" style="width:130px;margin:0 auto;margin-top:10px;">
           <div class="card-block">
             <h4 class="card-title">{{ manager.Description.Hostname }}</h4>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"><i class="fa fa-cog icon-space" aria-hidden="true"></i> Engine: {{ worker.Description }}</li>
-            <li class="list-group-item"><i class="fa fa-linux icon-space" aria-hidden="true"></i> OS: {{ worker.Description }}/{{ worker.Description }}</li>
-            <li class="list-group-item"><i class="fa fa-check icon-space" aria-hidden="true"></i> Availability: {{ worker.Spec.Availability }}</li>
+            <li class="list-group-item"><i class="fa fa-cog icon-space" aria-hidden="true"></i> Engine: {{ manager.Description.Engine.EngineVersion }}</li>
+            <li class="list-group-item"><i class="fa fa-linux icon-space" aria-hidden="true"></i> OS: {{ manager.Description.Platform.OS }}/{{ manager.Description.Platform.Architecture }}</li>
+            <li class="list-group-item"><i class="fa fa-check icon-space" aria-hidden="true"></i> Availability: {{ manager.Spec.Availability }}</li>
           </ul>
         </div>
     </div>
-</div>
-<h3>Workers:</h3>
+</div><br/>
 <div class="row">
-    <div class="col-lg-2" ng-repeat="worker in workers">
+    <div class="col-lg-12">
+        <p style="color:#607D8B">Swarm Workers</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-2" ng-repeat="worker in workers" style="font-size:0.8em">
         <div class="card">
-          <img class="card-img-top node-logo" src="/static/img/docker.png" alt="Node logo">
+          <img src="/static/img/node.png" style="width:130px;margin:0 auto;margin-top:10px;">
           <div class="card-block">
             <h4 class="card-title">{{ worker.Description.Hostname }}</h4>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"><i class="fa fa-cog icon-space" aria-hidden="true"></i> Engine: {{ worker.Description.Hostname }}</li>
+            <li class="list-group-item"><i class="fa fa-cog icon-space" aria-hidden="true"></i> Engine: {{ worker.Description.Engine.EngineVersion }}</li>
             <li class="list-group-item"><i class="fa fa-linux icon-space" aria-hidden="true"></i> OS: {{ worker.Description.Platform.OS }}/{{ worker.Description.Platform.Architecture }}</li>
             <li class="list-group-item"><i class="fa fa-check icon-space" aria-hidden="true"></i> Availability: {{ worker.Spec.Availability }}</li>
           </ul>
