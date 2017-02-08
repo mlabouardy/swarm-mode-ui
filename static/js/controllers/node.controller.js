@@ -1,5 +1,5 @@
 var NodeCtrl = function($routeParams, $scope, SwarmService){
-    SwarmService.getNodeName($routeParams.id).then(function(results){
+    SwarmService.inspectNode($routeParams.id).then(function(results){
         $scope.info = results.plain();
     });
 };

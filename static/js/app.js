@@ -9,6 +9,10 @@ angular.module('app', ['ngRoute', 'app.controllers'])
                 templateUrl: '/static/partials/services.html',
                 controller: 'ServicesCtrl'
             })
+            .when('/services/:id',{
+                templateUrl: '/static/partials/service.html',
+                controller: 'ServiceCtrl'
+            })
             .when('/tasks',{
                 templateUrl: '/static/partials/tasks.html',
                 controller: 'TasksCtrl'
