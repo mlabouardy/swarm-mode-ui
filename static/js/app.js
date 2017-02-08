@@ -13,5 +13,9 @@ angular.module('app', ['ngRoute', 'app.controllers'])
                 templateUrl: '/static/partials/tasks.html',
                 controller: 'TasksCtrl'
             })
+            .when('/nodes/:id',{
+                templateUrl: '/static/partials/node.html',
+                controller: 'NodeCtrl'
+            })
             .otherwise({redirectTo: '/'});
     })

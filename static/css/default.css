@@ -8,6 +8,7 @@
 
 .container-custom{
     margin-top:50px;
+    margin-bottom:50px;
 }
 
 .node-logo{
@@ -21,4 +22,35 @@
 
 .icon-space{
     margin-right: 5px;
+}
+
+.badge{
+    cursor: pointer;
+}
+
+.text-right{
+    text-align:right;
+    float:right;
+}
+
+.huge{
+    font-weight:bolder;
+    font-size:1.0em;
+    float:right;
+}
+
+.alert{
+    color: #FFF;
+}
+
+.alert-green{
+    background: #009587;
+}
+
+.alert-blue{
+    background: #3E50B4;
+}
+
+.alert-orange{
+    background: #FE5621;
 }

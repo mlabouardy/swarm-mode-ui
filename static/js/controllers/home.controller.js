@@ -1,4 +1,4 @@
-var HomeCtrl = function(SwarmService, $scope){
+var HomeCtrl = function(SwarmService, $scope, $location){
     $scope.workers = [];
     $scope.managers = [];
 
@@ -9,6 +9,10 @@ var HomeCtrl = function(SwarmService, $scope){
     SwarmService.getManagers().then(function(results){
         $scope.managers = results.plain();
     });
+
+    $scope.showNodeDetail = function(id){
+        $location.path('/nodes/' + id);
+    };
 
 };
 

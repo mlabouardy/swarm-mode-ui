@@ -8,7 +8,7 @@
         <div class="card">
           <img src="/static/img/node.svg" style="width:130px;margin:0 auto;margin-top:10px;">
           <div class="card-block">
-            <h4 class="card-title" style="font-weight:bolder;">{{ manager.Description.Hostname }}</h4>
+              <h4 class="card-title" style="font-weight:bolder;">{{ manager.Description.Hostname }}  <span ng-click="showNodeDetail(manager.ID)" class="badge badge-success pull-right"><i class="fa fa-search" aria-hidden="true"></i> View</span></h4>
           </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item"><i class="fa fa-cog icon-space" aria-hidden="true"></i> Engine: {{ manager.Description.Engine.EngineVersion }}</li>
@@ -28,7 +28,7 @@
         <div class="card">
           <img src="/static/img/node.svg" style="width:130px;margin:0 auto;margin-top:10px;">
           <div class="card-block">
-            <h4 class="card-title" style="font-weight:bolder;">{{ worker.Description.Hostname }}</h4>
+            <h4 class="card-title" style="font-weight:bolder;">{{ worker.Description.Hostname }}  <span ng-click="showNodeDetail(worker.ID)" class="badge badge-success pull-right"><i class="fa fa-search" aria-hidden="true"></i> View</span></h4>
           </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item"><i class="fa fa-cog icon-space" aria-hidden="true"></i> Engine: {{ worker.Description.Engine.EngineVersion }}</li>
