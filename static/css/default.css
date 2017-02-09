@@ -8,7 +8,6 @@
 
 .container-custom{
     margin-top:50px;
-    margin-bottom:50px;
 }
 
 .node-logo{
@@ -53,4 +52,12 @@
 
 .alert-orange{
     background: #FE5621;
+}
+
+.alert-red{
+    background: #E81D62;
+}
+
+.card{
+    margin-bottom:30px;
 }
