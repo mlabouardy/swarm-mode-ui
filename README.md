@@ -14,3 +14,8 @@ https://github.com/mlabouardy/swarm-setup-vagrant
 - Inspect service
 - List swarm tasks
 - Inspect task
+
+# TO DO
+
+- Support TLS
+- Create a service from dashboard
