@@ -13,16 +13,20 @@ class Docker:
         r = requests.get(self.URL + '/services')
         return r.json();
 
-    def inspectService(self, name):
-        r = requests.get(self.URL + '/services/' + name)
+    def inspectService(self, id):
+        r = requests.get(self.URL + '/services/' + id)
         return r.json();
 
     def getTasks(self):
         r = requests.get(self.URL + '/tasks')
         return r.json();
 
-    def inspectNode(self, name):
-        r = requests.get(self.URL + '/nodes/' + name)
+    def inspectTask(self, id):
+        r = requests.get(self.URL + '/tasks/' + id)
+        return r.json()
+
+    def inspectNode(self, id):
+        r = requests.get(self.URL + '/nodes/' + id)
         return r.json();
 
     def getManagers(self):

@@ -1,4 +1,4 @@
-var TasksCtrl = function($scope, SwarmService) {
+var TasksCtrl = function($scope, SwarmService, $location) {
     $scope.tasks = [];
 
     SwarmService.getTasks().then(function(results){
@@ -10,6 +10,10 @@ var TasksCtrl = function($scope, SwarmService) {
             })
         })
     });
+
+    $scope.showTaskDetail = function(id){
+        $location.path('/tasks/' + id);
+    }
 
 };
 

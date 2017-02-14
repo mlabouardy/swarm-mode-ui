@@ -23,6 +23,11 @@ var SwarmService = function(Restangular){
     this.inspectService = function(id) {
         return Restangular.oneUrl('services/' + id).get();
     }
+
+    this.inspectTask = function(id) {
+        return Restangular.oneUrl('tasks/' + id).get();
+    }
+
 };
 
 angular.module('app.services')

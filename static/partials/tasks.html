@@ -3,7 +3,7 @@
         <div class="card">
           <img src="/static/img/task.svg" style="width:130px;margin:0 auto;margin-top:10px;">
           <div class="card-block">
-            <h4 class="card-title" style="font-weight:bolder;">{{ task.Spec.ContainerSpec.Image }}</h4>
+            <h4 class="card-title" style="font-weight:bolder;">{{ task.Spec.ContainerSpec.Image }} <span ng-click="showTaskDetail(task.ID)" class="badge badge-success pull-right"><i class="fa fa-search" aria-hidden="true"></i> View</span></h4>
           </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item"><i class="fa fa-linux icon-space" aria-hidden="true"></i> Node: {{ task.NodeName }}</li>

@@ -24,13 +24,17 @@ def services():
 def tasks():
     return jsonify(api.getTasks())
 
-@app.route('/nodes/<name>')
-def inspectNode(name):
-    return jsonify(api.inspectNode(name))
+@app.route('/tasks/<id>')
+def inspectTask(id):
+    return jsonify(api.inspectTask(id))
 
-@app.route('/services/<name>')
-def inspectService(name):
-    return jsonify(api.inspectService(name))
+@app.route('/nodes/<id>')
+def inspectNode(id):
+    return jsonify(api.inspectNode(id))
+
+@app.route('/services/<id>')
+def inspectService(id):
+    return jsonify(api.inspectService(id))
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000, debug=True)
