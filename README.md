@@ -19,3 +19,8 @@ https://github.com/mlabouardy/swarm-setup-vagrant
 
 - Support TLS
 - Create a service from dashboard
+- Deploy in Docker container
+- Push image to Docker Hub
+- TDD: 
+  - Front-end: Karma, Jasmine
+  - Back-end: Mocha, chai
